@@ -30,3 +30,4 @@ C:\Users\rk\Desktop\Xicht\Source\Xicht\obj\Debug\Xicht.Properties.Resources.reso
 C:\Users\rk\Desktop\Xicht\Source\Xicht\obj\Debug\Xicht.csproj.GenerateResource.Cache
 C:\Users\rk\Desktop\Xicht\Source\Xicht\obj\Debug\Xicht.exe
 C:\Users\rk\Desktop\Xicht\Source\Xicht\obj\Debug\Xicht.pdb
+C:\Users\rk\Desktop\Xicht\Source\Xicht\obj\Debug\Xicht.csprojResolveAssemblyReference.cache

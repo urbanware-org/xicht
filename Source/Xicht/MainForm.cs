@@ -36,13 +36,15 @@ namespace Xicht
         private bool freakOut = false;
         private bool randomHealth = false;
 
-        private bool topMost = true;
-        private bool trayIcon = false;
-
+        private bool isTopMost = true;
+        
         private Random rnd = new Random();
         private PerformanceCounter cpuCounter;
 
         private bool canDestroyIcon = true;
+        private bool disableTrayIcon = false;
+        private bool lockTrayIcon = false;
+        private bool trayIcon = false;
 
         #endregion
 
@@ -71,41 +73,41 @@ namespace Xicht
                     if (larg.StartsWith("left="))
                     {
                         temp = larg.Replace("left=", "");
-                        this.Left = Convert.ToInt32(temp);
+                        Left = Convert.ToInt32(temp);
                     }
                     if (larg.StartsWith("top="))
                     {
                         temp = larg.Replace("top=", "");
-                        this.Top = Convert.ToInt32(temp);
+                        Top = Convert.ToInt32(temp);
                     }
                     if (larg.StartsWith("height="))
                     {
                         temp = larg.Replace("height=", "");
-                        this.Height = Convert.ToInt32(temp);
+                        Height = Convert.ToInt32(temp);
                     }
                     if (larg.StartsWith("width="))
                     {
                         temp = larg.Replace("width=", "");
-                        this.Width = Convert.ToInt32(temp);
+                        Width = Convert.ToInt32(temp);
                     }
                 }
                 catch {}
 
                 if (larg == "disable-topmost")
                 {
-                    this.topMost = false;
+                    isTopMost = false;
                 }
 
                 if (larg == "tray")
                 {
-                    this.trayIcon = true;
+                    trayIcon = true;
                 }
             }
 
             // This solves some problems with some tiling window managers on
             // Unix-like systems which don't like the TopMost option enabled
             // by default
-            this.TopMost = topMost;
+            TopMost = isTopMost;
 
             foreach (string image in Directory.GetFiles(Path.Combine(Application.StartupPath, "Images"), "*.png", SearchOption.TopDirectoryOnly))
             {
@@ -130,8 +132,8 @@ namespace Xicht
             tsmMood.Image = imlFaces.Images["face_smile_100"];
             tsmFreakOut.Image = imlFaces.Images["face_shock_60"];
 
-            nfiTray.Visible = this.trayIcon;
-            tsmTrayIcon.Checked = this.trayIcon;
+            nfiTray.Visible = trayIcon;
+            tsmTrayIcon.Checked = trayIcon;
         }
 
         #endregion
@@ -140,11 +142,20 @@ namespace Xicht
 
         private void ResetTimers()
         {
-            tmrFace.Stop();
-            tmrMeasurement.Stop();
+            StopTimers();
+            StartTimers();
+        }
 
+        private void StartTimers()
+        {
             tmrFace.Start();
             tmrMeasurement.Start();
+        }
+
+        private void StopTimers()
+        {
+            tmrFace.Stop();
+            tmrMeasurement.Stop();
         }
 
         private void tmrFace_Tick(object sender, EventArgs e)
@@ -162,7 +173,7 @@ namespace Xicht
                 if (freakOut)
                 {
                     health = 1;
-                    this.Text = "1 %";
+                    Text = "1 %";
                 }
                 else
                 {
@@ -233,7 +244,7 @@ namespace Xicht
                 health = rnd.Next(1, 100);
             }
 
-            this.Text = health.ToString() + " %";
+            Text = health.ToString() + " %";
 
             if (health > 80)
             {
@@ -377,7 +388,9 @@ namespace Xicht
 
         private void FaceTray()
         {
-            if (pbMain.Image == null)
+            if (pbMain.Image == null ||
+                lockTrayIcon ||
+                disableTrayIcon)
             {
                 return;
             }
@@ -387,7 +400,7 @@ namespace Xicht
             Icon newIcon = Icon.FromHandle(Hicon);
 
             nfiTray.Icon = newIcon;
-            nfiTray.Text = this.Text;
+            nfiTray.Text = Text;
 
             if (canDestroyIcon)
             {
@@ -397,7 +410,33 @@ namespace Xicht
                 }
                 catch (System.DllNotFoundException)
                 {
+                    // When running into this exception, the tray icon feature works so
+                    // far, but the handles of the icons cannot be deleted which leads
+                    // to a slow but steadily increasing memory consumption.
                     canDestroyIcon = false;
+
+                    StopTimers();
+                    lockTrayIcon = true;
+
+                    DialogResult dialogResult = MessageBox.Show("The tray icon feature only works properly on Windows, yet.\n\nWhen using it on other platforms, it works so far, but the handles of the icons cannot be deleted. This leads to a slow but steadily increasing memory consumption.\n\nDo you want to use it anyway?", "Tray icon", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        trayIcon = true;
+                        lockTrayIcon = false;
+                        tsmTrayIcon.Checked = true;
+                        tsmTrayIcon.Enabled = true;
+                        nfiTray.Visible = true;
+                    }
+                    else
+                    {
+                        trayIcon = false;
+                        disableTrayIcon = true;
+                        tsmTrayIcon.Checked = false;
+                        tsmTrayIcon.Enabled = false;
+                        nfiTray.Visible = false;
+                    }
+
+                    StartTimers();
                 }
             }
         }
@@ -533,7 +572,7 @@ namespace Xicht
             randomHealth = false;
 
             FaceDead();
-            this.Text = "0 %";
+            Text = "0 %";
         }
 
         private void tsmExit_Click(object sender, EventArgs e)
@@ -543,14 +582,14 @@ namespace Xicht
 
         private void tsmRestoreSize_Click(object sender, EventArgs e)
         {
-            this.Height = height;
-            this.Width = width; 
+            Height = height;
+            Width = width; 
         }
 
         private void tsmRestorePosition_Click(object sender, EventArgs e)
         {
-            this.Left = xpos;
-            this.Top = ypos;
+            Left = xpos;
+            Top = ypos;
         }
 
         #endregion
