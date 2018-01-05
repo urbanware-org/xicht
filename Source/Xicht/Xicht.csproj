@@ -90,6 +90,7 @@
     <None Include="Resources\Icon\Xicht.png" />
     <None Include="Resources\Icon\Xicht_about.png" />
     <None Include="Resources\Icon\Xicht_tray.png" />
+    <None Include="Resources\About\faces_reinchard.png" />
     <Content Include="Xicht.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

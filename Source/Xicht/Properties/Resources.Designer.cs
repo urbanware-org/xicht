@@ -63,6 +63,16 @@ namespace Xicht.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap faces_reinchard {
+            get {
+                object obj = ResourceManager.GetObject("faces_reinchard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Xicht {
             get {
                 object obj = ResourceManager.GetObject("Xicht", resourceCulture);

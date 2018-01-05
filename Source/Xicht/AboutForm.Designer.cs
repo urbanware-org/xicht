@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
-            this.pbAboutLogo = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblXicht = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -38,22 +37,15 @@
             this.lblLicense = new System.Windows.Forms.Label();
             this.lnkLicense = new System.Windows.Forms.LinkLabel();
             this.lblGraphics = new System.Windows.Forms.Label();
+            this.pbReinchard = new System.Windows.Forms.PictureBox();
+            this.pbAboutLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReinchard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAboutLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pbAboutLogo
-            // 
-            this.pbAboutLogo.Image = global::Xicht.Properties.Resources.Xicht_about;
-            this.pbAboutLogo.Location = new System.Drawing.Point(12, 12);
-            this.pbAboutLogo.Name = "pbAboutLogo";
-            this.pbAboutLogo.Size = new System.Drawing.Size(64, 64);
-            this.pbAboutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbAboutLogo.TabIndex = 0;
-            this.pbAboutLogo.TabStop = false;
-            // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(321, 151);
+            this.btnClose.Location = new System.Drawing.Point(319, 163);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(83, 29);
             this.btnClose.TabIndex = 1;
@@ -125,19 +117,40 @@
             // lblGraphics
             // 
             this.lblGraphics.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGraphics.Location = new System.Drawing.Point(82, 107);
+            this.lblGraphics.Location = new System.Drawing.Point(129, 110);
             this.lblGraphics.Name = "lblGraphics";
-            this.lblGraphics.Size = new System.Drawing.Size(322, 33);
+            this.lblGraphics.Size = new System.Drawing.Size(273, 41);
             this.lblGraphics.TabIndex = 8;
             this.lblGraphics.Text = "Special thanks to Reinchard who designed and kindly provided the high resolution " +
     "face images used by default.";
+            // 
+            // pbReinchard
+            // 
+            this.pbReinchard.Image = global::Xicht.Properties.Resources.faces_reinchard;
+            this.pbReinchard.Location = new System.Drawing.Point(84, 110);
+            this.pbReinchard.Name = "pbReinchard";
+            this.pbReinchard.Size = new System.Drawing.Size(40, 40);
+            this.pbReinchard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbReinchard.TabIndex = 9;
+            this.pbReinchard.TabStop = false;
+            // 
+            // pbAboutLogo
+            // 
+            this.pbAboutLogo.Image = global::Xicht.Properties.Resources.Xicht_about;
+            this.pbAboutLogo.Location = new System.Drawing.Point(12, 12);
+            this.pbAboutLogo.Name = "pbAboutLogo";
+            this.pbAboutLogo.Size = new System.Drawing.Size(64, 64);
+            this.pbAboutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbAboutLogo.TabIndex = 0;
+            this.pbAboutLogo.TabStop = false;
             // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 192);
+            this.ClientSize = new System.Drawing.Size(416, 208);
             this.ControlBox = false;
+            this.Controls.Add(this.pbReinchard);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblGraphics);
             this.Controls.Add(this.lnkLicense);
@@ -156,6 +169,7 @@
             this.Text = "About";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AboutForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbReinchard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAboutLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,5 +187,6 @@
         private System.Windows.Forms.Label lblLicense;
         private System.Windows.Forms.LinkLabel lnkLicense;
         private System.Windows.Forms.Label lblGraphics;
+        private System.Windows.Forms.PictureBox pbReinchard;
     }
 }

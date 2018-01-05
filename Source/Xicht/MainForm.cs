@@ -1,5 +1,6 @@
 ﻿/******************************************************************************
  * Xicht - Visual CPU load monitoring tool                                    *
+ * Main form                                                                  *
  * Copyright (C) 2018 by Ralf Kilian                                          *
  * Distributed under the MIT License (https://opensource.org/licenses/MIT)    *
  *                                                                            *
@@ -412,13 +413,19 @@ namespace Xicht
                 {
                     // When running into this exception, the tray icon feature works so
                     // far, but the handles of the icons cannot be deleted which leads
-                    // to a slow but steadily increasing memory consumption.
+                    // to a slow but steadily increasing memory consumption
                     canDestroyIcon = false;
 
                     StopTimers();
                     lockTrayIcon = true;
 
-                    DialogResult dialogResult = MessageBox.Show("The tray icon feature only works properly on Windows, yet.\n\nWhen using it on other platforms, it works so far, but the handles of the icons cannot be deleted. This leads to a slow but steadily increasing memory consumption.\n\nDo you want to use it anyway?", "Tray icon", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                    DialogResult dialogResult = MessageBox.Show("The tray icon feature only works properly on Windows, yet.\n\n" + 
+                                                                "When using it on other platforms, it works so far, but the " +
+                                                                "handles of the icons cannot be deleted. This leads to a slow " +
+                                                                "but steadily increasing memory consumption.\n\nDo you want " +
+                                                                "to use it anyway?", "Tray icon",
+                                                                MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
+                                                                MessageBoxDefaultButton.Button2);
                     if (dialogResult == DialogResult.Yes)
                     {
                         trayIcon = true;
