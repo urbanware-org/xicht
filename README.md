@@ -22,7 +22,7 @@ In the 1990's, first-person shooters like _Doom_ had the player's face on their 
 
 The _Xicht_ project takes the _Doom_ HUD face as a model to display the CPU load. The more load the CPU has, the less "health" the displayed face shows.
 
-There is some typical behavior: 
+There is some typical behavior:
 
 * Randomly looks around<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht_main_window.png" alt="Main window" align="right"/>
 * Bleeds depending on the CPU load
@@ -56,6 +56,14 @@ Depending on the platform, the following runtime environments are required.
 The project was once written in 2015 using *Microsoft Visual Studio 2012 Express* (if I remember it right) and before uploading it here the binary has been compiled with _Visual Studio 2015 Community Edition_.
 
 Feel free to modify!
+
+### Compatibility
+
+#### Tray icon
+
+Notice that the tray icon feature only works properly on Windows, yet.
+
+When using it on other platforms, it works so far, but the handles of the icons cannot be deleted. This leads to a slow but steadily increasing memory consumption. Displaying it for a few minutes should not be a problem, rather than permanently enabling it.
 
 [Top](#xicht-)
 
