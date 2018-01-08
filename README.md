@@ -61,7 +61,7 @@ Feel free to modify!
 
 #### Tray icon
 
-Notice that the tray icon feature only works properly on Windows, yet.
+Notice that the tray icon feature only works properly on _Windows_, yet.
 
 When using it on other platforms, it works so far, but the handles of the icons cannot be deleted. This leads to a slow but steadily increasing memory consumption. Displaying the tray icon for a few minutes should not be a problem, rather than permanently enabling it.
 
