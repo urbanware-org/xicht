@@ -29,7 +29,7 @@ There is some typical behavior:
 * Shows "hurt face" when the load increases
 * Shows "shocked face" on high load increase
 * Shows "smile face" on high load decrease
-* Shows "dead face" on full CPU load.
+* Shows "dead face" on full CPU load
 * Shows "invulnerable face" with glowing eyes if the CPU is idle (not _Doom_ typical, but used for this case)
 
 Furthermore, there is a right-click menu, where you can manually set the maximum health displayed, trigger face events (such as smiling) and a totally useless "freak out" mode.
