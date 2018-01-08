@@ -59,7 +59,7 @@ Feel free to modify!
 
 ### Compatibility
 
-#### Tray icon
+#### Tray icon<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht_tray_icon.png" alt="Main window" align="right"/>
 
 Notice that the tray icon feature only works properly on _Windows_, yet.
 
