@@ -34,7 +34,7 @@ There is some typical behavior:
 
 Furthermore, there is a right-click menu, where you can manually set the maximum health displayed, trigger face events (such as smiling) and a totally useless "freak out" mode.
 
-There is also a small animated tray icon available.<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht_tray_icon.png" alt="Main window" align="right"/>
+There is also a small animated tray icon available.<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht_tray_icon.png" alt="Tray icon" align="right"/>
 
 [Top](#xicht-)
 
@@ -115,6 +115,20 @@ $ cd Images
 $ find -type f | grep "\.png$" > /tmp/png2ico.tmp
 $ while read line; do
       convert "$line" -define icon:auto-resize=32,24,16 $(sed -e "s/\.png$/\.ico/g" <<< $line)
+  done < /tmp/png2ico.tmp
+$ rm -f /tmp/png2ico.tmp
+$ mv *.ico ../Tray/
+```
+
+In case there is a problem displaying the transparency, you can replace it with e. g. the background color of your tray bar just by adding a couple of parameters.
+
+Let's assume your tray bar has the `#2f2f2f` (<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/2f2f2f.png" alt="#2f2f2f">) background color.
+
+```bash
+$ cd Images
+$ find -type f | grep "\.png$" > /tmp/png2ico.tmp
+$ while read line; do
+      convert "$line" -background "#2f2f2f" -flatten -define icon:auto-resize=32,24,16 $(sed -e "s/\.png$/\.ico/g" <<< $line)
   done < /tmp/png2ico.tmp
 $ rm -f /tmp/png2ico.tmp
 $ mv *.ico ../Tray/
