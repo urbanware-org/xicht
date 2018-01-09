@@ -122,7 +122,7 @@ $ mv *.ico ../Tray/
 
 In case there is a problem displaying the transparency, you can replace it with e. g. the background color of your tray bar just by adding a couple of parameters.
 
-Let's assume your tray bar has the `#2f2f2f` (<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/2f2f2f.png" alt="#2f2f2f">) background color.
+Let's assume your tray bar has the background color `#2f2f2f` (<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/2f2f2f.png" alt="#2f2f2f">). In that case the `convert` command looks like this:
 
 ```bash
 $ cd Images
