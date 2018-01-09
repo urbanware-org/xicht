@@ -109,7 +109,7 @@ Simply replace the corresponding files. Notice that the icons...
 
 You can also avoid the look-around effect here as described [above](#images).
 
-With the `convert` command provided by the platform-independent *ImageMagick* software suite you can simply convert the PNG images used on the main window to ICO files. For example under *Linux*:
+With the `convert` command provided by the platform-independent *ImageMagick* software suite you can simply convert the PNG images used on the main window to the ICO files required for the system tray. For example under *Linux*:
 
 ```bash
 $ cd Images
