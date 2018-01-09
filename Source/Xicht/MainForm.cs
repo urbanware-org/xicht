@@ -8,10 +8,10 @@
  ******************************************************************************/
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Xicht
@@ -42,10 +42,12 @@ namespace Xicht
         private Random rnd = new Random();
         private PerformanceCounter cpuCounter;
 
-        private bool canDestroyIcon = true;
-        private bool disableTrayIcon = false;
-        private bool lockTrayIcon = false;
         private bool trayIcon = false;
+
+        private string pathFaceImages = Path.Combine(Application.StartupPath, "Images");
+        private string pathFaceTray = Path.Combine(Application.StartupPath, "Tray");
+
+        private Dictionary<string, Icon> iconList = new Dictionary<string, Icon>();
 
         #endregion
 
@@ -109,11 +111,9 @@ namespace Xicht
             // Unix-like systems which don't like the TopMost option enabled
             // by default
             TopMost = isTopMost;
-
-            foreach (string image in Directory.GetFiles(Path.Combine(Application.StartupPath, "Images"), "*.png", SearchOption.TopDirectoryOnly))
-            {
-                imlFaces.Images.Add(Path.GetFileNameWithoutExtension(image), Image.FromFile(image));
-            }
+            
+            LoadImages();
+            LoadTrayIcons();
             
             tsmFaceEffects.Image = imlFaces.Images["face_shock_100"];
             tsmFaceShocked.Image = imlFaces.Images["face_shock_100"];
@@ -136,6 +136,57 @@ namespace Xicht
             nfiTray.Visible = trayIcon;
             tsmTrayIcon.Checked = trayIcon;
         }
+
+        #endregion
+
+        #region Load files
+
+        private void LoadTrayIcons()
+        {
+            if (!Directory.Exists(pathFaceTray))
+            {
+                trayIcon = false;
+                nfiTray.Visible = trayIcon;
+                tsmTrayIcon.Checked = trayIcon;
+
+                return;
+            }
+
+            foreach (string icon in Directory.GetFiles(pathFaceTray, "*.ico", SearchOption.TopDirectoryOnly))
+            {
+                iconList.Add(Path.GetFileNameWithoutExtension(icon), new Icon(icon));
+            }
+
+            if (iconList.Count == 0)
+            {
+                MessageBox.Show("There are no tray icons to load.\n\nThe sub-directory 'Tray' is " +
+                                "either empty or the image files have the wrong file type (ICO required).",
+                                "Directory empty", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void LoadImages()
+        {
+            if (!Directory.Exists(pathFaceImages))
+            {
+                MessageBox.Show("The sub-directory 'Images' which contains the image files is missing.",
+                                "Directory missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+
+            foreach (string image in Directory.GetFiles(pathFaceImages, "*.png", SearchOption.TopDirectoryOnly))
+            {
+                imlFaces.Images.Add(Path.GetFileNameWithoutExtension(image), Image.FromFile(image));
+            }
+
+            if (imlFaces.Images.Count == 0)
+            {
+                MessageBox.Show("There are no images to load.\n\nThe sub-directory 'Images' is either empty " +
+                                "or the image files have the wrong file type (PNG required).",
+                                "Directory empty", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
 
         #endregion
 
@@ -178,20 +229,12 @@ namespace Xicht
                 }
                 else
                 {
-                    if (nfiTray.Visible)
-                    {
-                        FaceTray();
-                    }
                     FaceDead();
                 }
                 return;
             }
             else if (health >= 100)
             {
-                if (nfiTray.Visible)
-                {
-                    FaceTray();
-                }
                 FaceInvincible();
                 return;
             }
@@ -218,10 +261,6 @@ namespace Xicht
             }
             lastHealth = health;
 
-            if (nfiTray.Visible)
-            {
-                FaceTray();
-            }
             FaceLook();
         }
 
@@ -275,75 +314,104 @@ namespace Xicht
 
         private void FaceDead()
         {
-            pbMain.Image = imlFaces.Images["face_dead"];
+            string currentFace = "face_dead";
+
+            pbMain.Image = imlFaces.Images[currentFace];
+            SetTrayIcon(currentFace);
+
             lastHealth = health;
         }
 
         private void FaceHurt()
         {
+            string currentFace;
+
             if (maxHealth > 0)
             {
                 switch (dir)
                 {
                     case 1:
-                        pbMain.Image = imlFaces.Images["face_hurt_left_" + face.ToString()];
+                        currentFace = "face_hurt_left_" + face.ToString();
                         break;
 
                     case 2:
-                        pbMain.Image = imlFaces.Images["face_hurt_right_" + face.ToString()];
+                        currentFace = "face_hurt_right_" + face.ToString();
                         break;
 
                     default:
-                        pbMain.Image = imlFaces.Images["face_hurt_center_" + face.ToString()];
+                        currentFace = "face_hurt_center_" + face.ToString();
                         break;
                 }
+
+                pbMain.Image = imlFaces.Images[currentFace];
+                SetTrayIcon(currentFace);
+
                 lastHealth = health;
             }
         }
 
         private void FaceInvincible()
         {
-            pbMain.Image = imlFaces.Images["face_invincible"];
+            string currentFace = "face_invincible";
+
+            pbMain.Image = imlFaces.Images[currentFace];
+            SetTrayIcon(currentFace);
+
             lastHealth = health;
         }
 
         private void FaceLook()
         {
+            string currentFace;
+
             if (maxHealth > 0)
             {
                 switch (dir)
                 {
                     case 1:
-                        pbMain.Image = imlFaces.Images["face_look_left_" + face.ToString()];
+                        currentFace = "face_look_left_" + face.ToString();
                         break;
 
                     case 2:
-                        pbMain.Image = imlFaces.Images["face_look_right_" + face.ToString()];
+                        currentFace = "face_look_right_" + face.ToString();
                         break;
 
                     default:
-                        pbMain.Image = imlFaces.Images["face_look_center_" + face.ToString()];
+                        currentFace = "face_look_center_" + face.ToString();
                         break;
                 }
+
+                pbMain.Image = imlFaces.Images[currentFace];
+                SetTrayIcon(currentFace);
+
+                lastHealth = health;
             }
         }
         
         private void FaceShocked()
         {
+            string currentFace = "face_shock_" + face.ToString();
+
             if (maxHealth > 0)
             {
-                pbMain.Image = imlFaces.Images["face_shock_" + face.ToString()];
-                lastHealth = health;
+                pbMain.Image = imlFaces.Images[currentFace];
+                SetTrayIcon(currentFace);
             }
+
+            lastHealth = health;
         }
 
         private void FaceSmile()
         {
+            string currentFace = "face_smile_" + face.ToString();
+
             if (maxHealth > 0)
             {
-                pbMain.Image = imlFaces.Images["face_smile_" + face.ToString()];
-                lastHealth = health;
+                pbMain.Image = imlFaces.Images[currentFace];
+                SetTrayIcon(currentFace);
             }
+
+            lastHealth = health;
         }
 
         #endregion
@@ -384,67 +452,20 @@ namespace Xicht
 
         #region Tray icon related
 
-        [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = CharSet.Auto)]
-        extern static bool DestroyIcon(IntPtr handle);
-
-        private void FaceTray()
+        private void SetTrayIcon(string currentFace)
         {
-            if (pbMain.Image == null ||
-                lockTrayIcon ||
-                disableTrayIcon)
+            if (!trayIcon)
             {
                 return;
             }
 
-            Bitmap myBitmap = new Bitmap(pbMain.Image);
-            IntPtr Hicon = myBitmap.GetHicon();
-            Icon newIcon = Icon.FromHandle(Hicon);
-
-            nfiTray.Icon = newIcon;
-            nfiTray.Text = Text;
-
-            if (canDestroyIcon)
+            if (iconList.ContainsKey(currentFace))
             {
-                try
-                {
-                    DestroyIcon(newIcon.Handle);
-                }
-                catch (System.DllNotFoundException)
-                {
-                    // When running into this exception, the tray icon feature works so
-                    // far, but the handles of the icons cannot be deleted which leads
-                    // to a slow but steadily increasing memory consumption
-                    canDestroyIcon = false;
-
-                    StopTimers();
-                    lockTrayIcon = true;
-
-                    DialogResult dialogResult = MessageBox.Show("The tray icon feature only works properly on Windows, yet.\n\n" + 
-                                                                "When using it on other platforms, it works so far, but the " +
-                                                                "handles of the icons cannot be deleted. This leads to a slow " +
-                                                                "but steadily increasing memory consumption.\n\nDo you want " +
-                                                                "to use it anyway?", "Tray icon",
-                                                                MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
-                                                                MessageBoxDefaultButton.Button2);
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        trayIcon = true;
-                        lockTrayIcon = false;
-                        tsmTrayIcon.Checked = true;
-                        tsmTrayIcon.Enabled = true;
-                        nfiTray.Visible = true;
-                    }
-                    else
-                    {
-                        trayIcon = false;
-                        disableTrayIcon = true;
-                        tsmTrayIcon.Checked = false;
-                        tsmTrayIcon.Enabled = false;
-                        nfiTray.Visible = false;
-                    }
-
-                    StartTimers();
-                }
+                nfiTray.Icon = iconList[currentFace];
+            }
+            else
+            {
+                nfiTray.Icon = Properties.Resources.tray_none;
             }
         }
 
@@ -452,13 +473,15 @@ namespace Xicht
         {
             if (tsmTrayIcon.Checked)
             {
-                nfiTray.Visible = false;
+                trayIcon = false;
                 tsmTrayIcon.Checked = false;
+                nfiTray.Visible = false;
             }
             else
             {
-                nfiTray.Visible = true;
+                trayIcon = true;
                 tsmTrayIcon.Checked = true;
+                nfiTray.Visible = true;
             }
         }
 
