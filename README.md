@@ -34,7 +34,8 @@ There is some typical behavior:
 
 Furthermore, there is a right-click menu, where you can manually set the maximum health displayed, trigger face events (such as smiling) and a totally useless "freak out" mode.
 
-There is also an animated tray icon available that also shows the CPU load in the system tray.
+There is also an optional small animated tray icon available.<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht_tray_icon.png" alt="Main window" align="right"/>
+
 
 [Top](#xicht-)
 
@@ -56,14 +57,6 @@ Depending on the platform, the following runtime environments are required.
 The project was once written in 2015 using *Microsoft Visual Studio 2012 Express* (if I remember it right) and before uploading it here the binary has been compiled with _Visual Studio 2015 Community Edition_.
 
 Feel free to modify!
-
-### Compatibility
-
-#### Tray icon<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht_tray_icon.png" alt="Main window" align="right"/>
-
-Notice that the tray icon feature only works properly on _Windows_, yet.
-
-When using it on other platforms, it works so far, but the handles of the icons cannot be deleted. This leads to a slow but steadily increasing memory consumption. Displaying the tray icon for a few minutes should not be a problem, rather than permanently enabling it.
 
 [Top](#xicht-)
 
