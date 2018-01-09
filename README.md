@@ -128,7 +128,8 @@ Let's assume your tray bar has the background color `#2f2f2f` (<img src="https:/
 $ cd Images
 $ find -type f | grep "\.png$" > /tmp/png2ico.tmp
 $ while read line; do
-      convert "$line" -background "#2f2f2f" -flatten -define icon:auto-resize=32,24,16 $(sed -e "s/\.png$/\.ico/g" <<< $line)
+      convert "$line" -background "#2f2f2f" -flatten \
+              -define icon:auto-resize=32,24,16 $(sed -e "s/\.png$/\.ico/g" <<< $line)
   done < /tmp/png2ico.tmp
 $ rm -f /tmp/png2ico.tmp
 $ mv *.ico ../Tray/
