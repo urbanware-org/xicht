@@ -78,20 +78,48 @@ However, if you want to use the original _Doom_ faces anyway, you may find them 
 
 ### Replacing with user-defined images
 
-Inside the `Images` sub-directory you can find the different image files of the faces used by _Xicht_ to display the status.
+The default face images can be easily replaced with user-defined ones. Of course, you can also use different graphics that are not related to _Doom_.
 
 You may backup the directory first before making any changes.
+
+#### Images
+
+Inside the `Images` sub-directory you can find the different image files of the faces used by _Xicht_ to display the status on the main window.
 
 Simply replace the corresponding files. Notice that the images...
 
 * must have the correct file name, otherwise no or the wrong image will be displayed.
 * must have the same height and width (square), otherwise they will be scaled and, due to this, warped.
+* must be image files in PNG format.
 * should have a size of (at least) 256x256 pixels.
 * should have a transparent background or the same color as the background of the main window (black `#000000`).
 
 If you don't want the look-around effect, you can take the look center image e. g. `face_look_center_100.png` and create duplicates called `face_look_left_100` and `face_look_right_100`.
 
-Of course, you can also use different graphics that are not related to _Doom_.
+#### Tray icon
+
+Inside the `Tray` sub-directory you can find the icons used to display the status in the system tray.
+
+Simply replace the corresponding files. Notice that the icons...
+
+* must have the correct file name, otherwise no or the wrong icon will be displayed.
+* must be icon files in ICO format.
+* should have a size of 32x32 pixels and also contain 16x16 and 24x24 variants.
+* should have a transparent background.
+
+You can also avoid the look-around effect here as described [above](#images).
+
+With the `convert` command provided by the platform-independent *ImageMagick* software suite you can simply convert the PNG images used on the main window to ICO files. For example under *Linux*:
+
+```bash
+$ cd Images
+$ find -type f | grep "\.png$" > /tmp/png2ico.tmp
+$ while read line; do
+      convert "$line" -define icon:auto-resize=32,24,16 $(sed -e "s/\.png$/\.ico/g" <<< $line)
+  done < /tmp/png2ico.tmp
+$ rm -f /tmp/png2ico.tmp
+$ mv *.ico ../Tray/
+```
 
 [Top](#xicht-)
 
