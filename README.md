@@ -36,7 +36,6 @@ Furthermore, there is a right-click menu, where you can manually set the maximum
 
 There is also a small animated tray icon available.<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht_tray_icon.png" alt="Main window" align="right"/>
 
-
 [Top](#xicht-)
 
 ## Requirements
