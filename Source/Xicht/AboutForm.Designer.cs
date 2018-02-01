@@ -39,13 +39,15 @@
             this.lblGraphics = new System.Windows.Forms.Label();
             this.pbReinchard = new System.Windows.Forms.PictureBox();
             this.pbAboutLogo = new System.Windows.Forms.PictureBox();
+            this.lnkGitHub = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbReinchard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAboutLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(319, 163);
+            this.btnClose.Location = new System.Drawing.Point(321, 188);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(83, 29);
             this.btnClose.TabIndex = 1;
@@ -111,15 +113,15 @@
             this.lnkLicense.Size = new System.Drawing.Size(63, 13);
             this.lnkLicense.TabIndex = 7;
             this.lnkLicense.TabStop = true;
-            this.lnkLicense.Text = "MIT Licence";
+            this.lnkLicense.Text = "MIT License";
             this.lnkLicense.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLicense_LinkClicked);
             // 
             // lblGraphics
             // 
             this.lblGraphics.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGraphics.Location = new System.Drawing.Point(129, 110);
+            this.lblGraphics.Location = new System.Drawing.Point(129, 133);
             this.lblGraphics.Name = "lblGraphics";
-            this.lblGraphics.Size = new System.Drawing.Size(273, 41);
+            this.lblGraphics.Size = new System.Drawing.Size(275, 41);
             this.lblGraphics.TabIndex = 8;
             this.lblGraphics.Text = "Special thanks to Reinchard who designed and kindly provided the high resolution " +
     "face images used by default.";
@@ -127,7 +129,7 @@
             // pbReinchard
             // 
             this.pbReinchard.Image = global::Xicht.Properties.Resources.faces_reinchard;
-            this.pbReinchard.Location = new System.Drawing.Point(84, 110);
+            this.pbReinchard.Location = new System.Drawing.Point(84, 133);
             this.pbReinchard.Name = "pbReinchard";
             this.pbReinchard.Size = new System.Drawing.Size(40, 40);
             this.pbReinchard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,12 +146,35 @@
             this.pbAboutLogo.TabIndex = 0;
             this.pbAboutLogo.TabStop = false;
             // 
+            // lnkGitHub
+            // 
+            this.lnkGitHub.AutoSize = true;
+            this.lnkGitHub.Location = new System.Drawing.Point(203, 107);
+            this.lnkGitHub.Name = "lnkGitHub";
+            this.lnkGitHub.Size = new System.Drawing.Size(39, 13);
+            this.lnkGitHub.TabIndex = 11;
+            this.lnkGitHub.TabStop = true;
+            this.lnkGitHub.Text = "GitHub";
+            this.lnkGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGitHub_LinkClicked);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(82, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "This project is hosted on";
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 208);
+            this.ClientSize = new System.Drawing.Size(416, 229);
             this.ControlBox = false;
+            this.Controls.Add(this.lnkGitHub);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pbReinchard);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblGraphics);
@@ -188,5 +213,7 @@
         private System.Windows.Forms.LinkLabel lnkLicense;
         private System.Windows.Forms.Label lblGraphics;
         private System.Windows.Forms.PictureBox pbReinchard;
+        private System.Windows.Forms.LinkLabel lnkGitHub;
+        private System.Windows.Forms.Label label1;
     }
 }

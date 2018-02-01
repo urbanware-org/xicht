@@ -46,14 +46,14 @@ namespace Xicht
 
         #region Link related
 
+        private void lnkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/urbanware-org/xicht");
+        }
+
         private void lnkLicense_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("https://opensource.org/licenses/MIT");
-        }
-
-        private void lnkReinchard_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://www.doomworld.com/profile/8949-reinchard");
         }
 
         #endregion
