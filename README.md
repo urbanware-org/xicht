@@ -63,7 +63,7 @@ Feel free to modify!
 
 ### Default images
 
-By default, *Xicht* comes with some great high resolution face images (as shown on the screenshot above). Special thanks to Reinchard for designing and kindly providing them.
+By default, *Xicht* comes with some great [high resolution face images](https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Preview.md) (as shown on the screenshot above). Special thanks to Reinchard for designing and kindly providing them.
 
 ### Original images
 
