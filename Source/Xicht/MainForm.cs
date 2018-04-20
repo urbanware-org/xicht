@@ -38,11 +38,12 @@ namespace Xicht
         private bool randomHealth = false;
 
         private bool isTopMost = true;
-        
+
         private Random rnd = new Random();
         private PerformanceCounter cpuCounter;
 
         private bool trayIcon = false;
+        private bool trayToolTip = true;
 
         private string pathFaceImages = Path.Combine(Application.StartupPath, "Images");
         private string pathFaceTray = Path.Combine(Application.StartupPath, "Tray");
@@ -94,11 +95,16 @@ namespace Xicht
                         Width = Convert.ToInt32(temp);
                     }
                 }
-                catch {}
+                catch { }
 
                 if (larg == "disable-topmost")
                 {
                     isTopMost = false;
+                }
+
+                if (larg == "disable-tooltip")
+                {
+                    trayToolTip = false;
                 }
 
                 if (larg == "tray")
@@ -107,14 +113,21 @@ namespace Xicht
                 }
             }
 
-            // This solves some problems with some tiling window managers on
-            // Unix-like systems which don't like the TopMost option enabled
-            // by default
+            // This solves some problems when using tiling window managers
+            // on Unix-like systems which don't like the TopMost option
+            // enabled by default
             TopMost = isTopMost;
-            
+
+            // Another setting to fix possible display errors with tiling
+            // window managers
+            if (!trayToolTip)
+            {
+                nfiTray.Text = "";
+            }
+
             LoadImages();
             LoadTrayIcons();
-            
+
             tsmFaceEffects.Image = imlFaces.Images["face_shock_100"];
             tsmFaceShocked.Image = imlFaces.Images["face_shock_100"];
             tsmFaceHurt.Image = imlFaces.Images["face_hurt_center_100"];
@@ -387,7 +400,7 @@ namespace Xicht
                 lastHealth = health;
             }
         }
-        
+
         private void FaceShocked()
         {
             string currentFace = "face_shock_" + face.ToString();
@@ -561,7 +574,7 @@ namespace Xicht
             tsmFaceInvincible.Enabled = false;
             tsmRandomHealth.Enabled = true;
             tsmMood.Enabled = true;
-            
+
             maxHealth = 60;
             randomHealth = false;
         }
@@ -613,7 +626,7 @@ namespace Xicht
         private void tsmRestoreSize_Click(object sender, EventArgs e)
         {
             Height = height;
-            Width = width; 
+            Width = width;
         }
 
         private void tsmRestorePosition_Click(object sender, EventArgs e)
