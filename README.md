@@ -1,4 +1,4 @@
-# *Xicht* <img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht.png" alt="Xicht logo" height="48px" width="48px" align="right"/>
+# *Xicht* <img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht.png" alt="Xicht logo" height="48px" width="48px" align="right"/>
 
 **Table of contents**
 *   [Definition](#definition)
@@ -24,7 +24,7 @@ The *Xicht* project takes the *Doom* HUD face as a model to display the CPU load
 
 There is some typical behavior:
 
-*   Randomly looks around<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht_main_window.png" alt="Main window" align="right"/>
+*   Randomly looks around<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht_main_window.png" alt="Main window" align="right"/>
 *   Bleeds depending on the CPU load
 *   Shows "hurt face" when the load increases
 *   Shows "shocked face" on high load increase
@@ -34,7 +34,7 @@ There is some typical behavior:
 
 Furthermore, there is a right-click menu, where you can manually set the maximum health displayed, trigger face events (such as smiling) and a totally useless "freak out" mode.
 
-There is also a small animated tray icon available.<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/Xicht_tray_icon.png" alt="Tray icon" align="right"/>
+There is also a small animated tray icon available.<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht_tray_icon.png" alt="Tray icon" align="right"/>
 
 [Top](#xicht-)
 
@@ -122,7 +122,7 @@ $ mv *.ico ../Tray/
 
 In case there is a problem displaying the transparency, you can replace it with e. g. the background color of your tray bar just by adding a couple of parameters.
 
-Let's assume your tray bar has the background color `#2f2f2f` (<img src="https://github.com/urbanware-org/xicht/blob/master/Stuff/GitHub/2f2f2f.png" alt="#2f2f2f">). In that case the `convert` command looks like this:
+Let's assume your tray bar has the background color `#2f2f2f` (<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/2f2f2f.png" alt="#2f2f2f">). In that case the `convert` command looks like this:
 
 ```bash
 $ cd Images
