@@ -93,7 +93,7 @@ Simply replace the corresponding files. Notice that the images...
 *   should have a size of (at least) 256x256 pixels.
 *   should have a transparent background or the same color as the background of the main window (black `#000000`).
 
-If you don't want the look-around effect, you can take the look center image e. g. `face_look_center_100.png` and create duplicates called `face_look_left_100` and `face_look_right_100`.
+If you don't want the look-around effect, you can take the look center image e. g. `face_look_center_100.png` and create duplicates called `face_look_left_100.png` and `face_look_right_100.png`.
 
 #### Tray icon
 
