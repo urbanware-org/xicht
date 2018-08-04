@@ -1,12 +1,13 @@
 ﻿/******************************************************************************
  * Xicht - Visual CPU load monitoring tool                                    *
- * About form                                                                  *
+ * About form                                                                 *
  * Copyright (C) 2018 by Ralf Kilian                                          *
  * Distributed under the MIT License (https://opensource.org/licenses/MIT)    *
  *                                                                            *
  * GitHub: https://github.com/urbanware-org/xicht                             *
+ * GitLab: https://gitlab.com/urbanware-org/xicht                             *
  ******************************************************************************/
- 
+
 using System;
 using System.Diagnostics;
 using System.Reflection;
@@ -51,6 +52,11 @@ namespace Xicht
             Process.Start("https://github.com/urbanware-org/xicht");
         }
 
+        private void lnkGitLab_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://gitlab.com/urbanware-org/xicht");
+        }
+
         private void lnkLicense_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("https://opensource.org/licenses/MIT");
@@ -60,5 +66,3 @@ namespace Xicht
 
     }
 }
-
-/* EOF */

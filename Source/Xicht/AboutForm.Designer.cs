@@ -40,7 +40,8 @@
             this.pbReinchard = new System.Windows.Forms.PictureBox();
             this.pbAboutLogo = new System.Windows.Forms.PictureBox();
             this.lnkGitHub = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblHosted = new System.Windows.Forms.Label();
+            this.lnkGitLab = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbReinchard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAboutLogo)).BeginInit();
             this.SuspendLayout();
@@ -149,7 +150,7 @@
             // lnkGitHub
             // 
             this.lnkGitHub.AutoSize = true;
-            this.lnkGitHub.Location = new System.Drawing.Point(203, 107);
+            this.lnkGitHub.Location = new System.Drawing.Point(204, 107);
             this.lnkGitHub.Name = "lnkGitHub";
             this.lnkGitHub.Size = new System.Drawing.Size(39, 13);
             this.lnkGitHub.TabIndex = 11;
@@ -157,15 +158,26 @@
             this.lnkGitHub.Text = "GitHub";
             this.lnkGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGitHub_LinkClicked);
             // 
-            // label1
+            // lblHosted
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(82, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "This project is hosted on";
+            this.lblHosted.AutoSize = true;
+            this.lblHosted.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHosted.Location = new System.Drawing.Point(82, 107);
+            this.lblHosted.Name = "lblHosted";
+            this.lblHosted.Size = new System.Drawing.Size(184, 13);
+            this.lblHosted.TabIndex = 10;
+            this.lblHosted.Text = "This project is hosted on              and";
+            // 
+            // lnkGitLab
+            // 
+            this.lnkGitLab.AutoSize = true;
+            this.lnkGitLab.Location = new System.Drawing.Point(264, 107);
+            this.lnkGitLab.Name = "lnkGitLab";
+            this.lnkGitLab.Size = new System.Drawing.Size(37, 13);
+            this.lnkGitLab.TabIndex = 12;
+            this.lnkGitLab.TabStop = true;
+            this.lnkGitLab.Text = "GitLab";
+            this.lnkGitLab.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGitLab_LinkClicked);
             // 
             // AboutForm
             // 
@@ -173,8 +185,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 229);
             this.ControlBox = false;
+            this.Controls.Add(this.lnkGitLab);
             this.Controls.Add(this.lnkGitHub);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblHosted);
             this.Controls.Add(this.pbReinchard);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblGraphics);
@@ -214,6 +227,7 @@
         private System.Windows.Forms.Label lblGraphics;
         private System.Windows.Forms.PictureBox pbReinchard;
         private System.Windows.Forms.LinkLabel lnkGitHub;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHosted;
+        private System.Windows.Forms.LinkLabel lnkGitLab;
     }
 }
