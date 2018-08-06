@@ -145,6 +145,7 @@ Notice that the arguments neither start with dashes (`-` or `--`) nor slashes (`
 
 ### General
 
+*   `disable-tooltip`<br>Do not show the tooltip on mouseover at the tray icon (if enabled).
 *   `disable-topmost`<br>The main window will not stay in the foreground if it has lost the focus. This solves some problems with some tiling window managers on *Unix*-like systems.
 *   `tray`<br>Show the tray icon by default.
 
