@@ -155,13 +155,13 @@ Notice that there is no validation or error handling for these arguments, so giv
 
 #### Size
 
-*   `height=<value>`<br>The default height of the main window in pixels.
-*   `width=<value>`<br>The default width of the main window in pixels.
+*   `height=`*`<value>`*<br>The default height of the main window in pixels.
+*   `width=`*`<value>`*<br>The default width of the main window in pixels.
 
 #### Position
 
-*   `top=<value>`<br>The distance in pixels between the top edge of the screen and the main window.
-*   `left=<value>`<br>The distance in pixels between the left edge of the screen and the main window.
+*   `top=`*`<value>`*<br>The distance in pixels between the top edge of the screen and the main window.
+*   `left=`*`<value>`*<br>The distance in pixels between the left edge of the screen and the main window.
 
 [Top](#xicht-)
 
