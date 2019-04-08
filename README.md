@@ -48,7 +48,7 @@ Depending on the platform, the following runtime environments are required.
     *   *Microsoft .NET Framework 2.0* (or higher)
 *   ***Linux***:
     *   *Mono* (tested with version 4.2.4)
-*   ***MacOS***:
+*   ***macOS***:
     *   Should also run with *Mono* (not tested, yet)
 
 ### Source code
