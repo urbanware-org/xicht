@@ -1,6 +1,8 @@
 # Preview
 
-The following graphics are included in *Xicht* by default.
+The following great high resolution face images are included in *Xicht* by default.
+
+Special thanks to Reinchard for designing and kindly providing them.
 
 <img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Images/face_look_center_100.png" alt="Image" height="64px"> <img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Images/face_look_center_80.png" alt="Image" height="64px">
 <img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Images/face_look_center_60.png" alt="Image" height="64px"> <img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Images/face_look_center_40.png" alt="Image" height="64px">
