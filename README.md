@@ -93,7 +93,7 @@ Simply replace the corresponding files. Notice that the images...
 *   should have a size of (at least) 256x256 pixels.
 *   should have a transparent background or the same color as the background of the main window (black `#000000`).
 
-If you don't want the look-around effect, you can take the look center image e. g. `face_look_center_100.png` and create duplicates called `face_look_left_100.png` and `face_look_right_100.png`.
+If you don't want the look-around effect, you can take the look center image e.g. `face_look_center_100.png` and create duplicates called `face_look_left_100.png` and `face_look_right_100.png`.
 
 #### Tray icon
 
@@ -120,7 +120,7 @@ $ rm -f /tmp/png2ico.tmp
 $ mv *.ico ../Tray/
 ```
 
-In case there is a problem displaying the transparency, you can replace it with e. g. the background color of your tray bar just by adding a couple of parameters.
+In case there is a problem displaying the transparency, you can replace it with e.g. the background color of your tray bar just by adding a couple of parameters.
 
 Let's assume your tray bar has the background color `#2f2f2f` (<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/2f2f2f.png" alt="#2f2f2f">). In that case the `convert` command looks like this:
 
@@ -155,13 +155,13 @@ Notice that there is no validation or error handling for these arguments, so giv
 
 #### Size
 
-*   `height=`<br>The default height of the main window in pixels, e. g. `height=280` (without spaces).
-*   `width=`<br>The default width of the main window in pixels, e. g. `width=400` (without spaces).
+*   `height=`<br>The default height of the main window in pixels, e.g. `height=280` (without spaces).
+*   `width=`<br>The default width of the main window in pixels, e.g. `width=400` (without spaces).
 
 #### Position
 
-*   `top=`<br>The distance in pixels between the top edge of the screen and the main window e. g. `top=100` (without spaces).
-*   `left=`<br>The distance in pixels between the left edge of the screen and the main window e. g. `left=100` (without spaces).
+*   `top=`<br>The distance in pixels between the top edge of the screen and the main window e.g. `top=100` (without spaces).
+*   `left=`<br>The distance in pixels between the left edge of the screen and the main window e.g. `left=100` (without spaces).
 
 [Top](#xicht-)
 
