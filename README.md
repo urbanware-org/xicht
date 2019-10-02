@@ -1,4 +1,4 @@
-# *Xicht* <img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht.png" alt="Xicht logo" height="48px" width="48px" align="right"/>
+# *Xicht* <img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht.png" alt="Xicht logo" height="128px" width="128px" align="right"/>
 
 **Table of contents**
 *   [Definition](#definition)
