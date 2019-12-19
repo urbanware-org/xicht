@@ -6,6 +6,7 @@
 *   [Requirements](#requirements)
 *   [Graphics](#graphics)
 *   [Command-line arguments](#command-line-arguments)
+*   [Contact](#contact)
 *   [Useless facts](#useless-facts)
 
 ----
@@ -162,6 +163,14 @@ Notice that there is no validation or error handling for these arguments, so giv
 
 *   `top=`<br>The distance in pixels between the top edge of the screen and the main window e.g. `top=100` (without spaces).
 *   `left=`<br>The distance in pixels between the left edge of the screen and the main window e.g. `left=100` (without spaces).
+
+[Top](#xicht-)
+
+## Contact
+
+Any suggestions, questions, bugs to report or feedback to give?
+
+You can contact me by sending an email to [dev@urbanware.org](mailto:dev@urbanware.org) or by opening a *GitHub* issue (which I would prefer if you have a *GitHub* account).
 
 [Top](#xicht-)
 
