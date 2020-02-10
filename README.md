@@ -35,7 +35,7 @@ There is some typical behavior:<img src="https://raw.githubusercontent.com/urban
 
 Furthermore, there is a right-click menu, where you can manually set the maximum health displayed, trigger face events (such as smiling) and a totally useless "freak out" mode.
 
-There is also a small animated tray icon available.<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht_tray_icon.png" alt="Tray icon" align="right"/>
+There is also a small animated tray icon available.<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht_tray_icon.gif" alt="Tray icon" align="right"/>
 
 [Top](#xicht-)
 
