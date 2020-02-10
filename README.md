@@ -23,9 +23,9 @@ In the 1990's, first-person shooters like *Doom* had the protagonist's face on t
 
 The *Xicht* project takes the *Doom* HUD face as a model to display the CPU load. The more load the CPU has, the less "health" the displayed face shows.
 
-There is some typical behavior:
+There is some typical behavior:<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht_main_window.gif" alt="Main window" align="right"/>
 
-*   Randomly looks around<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht_main_window.png" alt="Main window" align="right"/>
+*   Randomly looks around
 *   Bleeds depending on the CPU load
 *   Shows "hurt face" when the load increases
 *   Shows "shocked face" on high load increase
