@@ -25,7 +25,7 @@ The *Xicht* project takes the *Doom* HUD face as a model to display the CPU load
 
 There is some typical behavior:<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht_main_window.gif" alt="Main window" align="right"/>
 
-*   Randomly looks around
+*   Randomly looks around (as shown in the image on the right)
 *   Bleeds depending on the CPU load
 *   Shows "hurt face" when the load increases
 *   Shows "shocked face" on high load increase
