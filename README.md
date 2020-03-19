@@ -142,7 +142,7 @@ $ mv *.ico ../Tray/
 
 There are a few command-line arguments for *Xicht* to set some options on startup.
 
-Notice that the arguments neither start with dashes (`-` or `--`) nor slashes (`/`).
+Notice that the arguments neither start with hyphens (`-` or `--`) nor slashes (`/`).
 
 ### General
 
