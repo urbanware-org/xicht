@@ -1,7 +1,7 @@
 ﻿/******************************************************************************
  * Xicht - Visual CPU load monitoring tool                                    *
  * Partial class for face effect related code                                 *
- * Copyright (C) 2018 by Ralf Kilian                                          *
+ * Copyright (C) 2020 by Ralf Kilian                                          *
  * Distributed under the MIT License (https://opensource.org/licenses/MIT)    *
  *                                                                            *
  * GitHub: https://github.com/urbanware-org/xicht                             *

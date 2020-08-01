@@ -66,6 +66,7 @@
             // 
             // cmsPreferences
             // 
+            this.cmsPreferences.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmsPreferences.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmHead,
             this.tsmPlaceHolder1,
@@ -73,7 +74,7 @@
             this.tsmMaxHealth,
             this.tsmMood});
             this.cmsPreferences.Name = "cmsPreferences";
-            this.cmsPreferences.Size = new System.Drawing.Size(171, 120);
+            this.cmsPreferences.Size = new System.Drawing.Size(184, 120);
             // 
             // tsmHead
             // 
@@ -83,45 +84,45 @@
             this.tsmTrayIcon,
             this.tsmAbout,
             this.tsmExit});
-            this.tsmHead.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmHead.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmHead.Image = global::Xicht.Properties.Resources.Xicht;
             this.tsmHead.Name = "tsmHead";
-            this.tsmHead.Size = new System.Drawing.Size(170, 22);
+            this.tsmHead.Size = new System.Drawing.Size(183, 22);
             this.tsmHead.Text = "Xicht";
             // 
             // tsmRestorePosition
             // 
-            this.tsmRestorePosition.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.tsmRestorePosition.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tsmRestorePosition.Image = global::Xicht.Properties.Resources.Xicht_restore;
             this.tsmRestorePosition.Name = "tsmRestorePosition";
-            this.tsmRestorePosition.Size = new System.Drawing.Size(228, 22);
+            this.tsmRestorePosition.Size = new System.Drawing.Size(244, 22);
             this.tsmRestorePosition.Text = "Restore default window position";
             this.tsmRestorePosition.Click += new System.EventHandler(this.tsmRestorePosition_Click);
             // 
             // tsmRestoreSize
             // 
-            this.tsmRestoreSize.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.tsmRestoreSize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tsmRestoreSize.Image = global::Xicht.Properties.Resources.Xicht_restore;
             this.tsmRestoreSize.Name = "tsmRestoreSize";
-            this.tsmRestoreSize.Size = new System.Drawing.Size(228, 22);
+            this.tsmRestoreSize.Size = new System.Drawing.Size(244, 22);
             this.tsmRestoreSize.Text = "Restore default window size";
             this.tsmRestoreSize.Click += new System.EventHandler(this.tsmRestoreSize_Click);
             // 
             // tsmTrayIcon
             // 
-            this.tsmTrayIcon.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.tsmTrayIcon.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tsmTrayIcon.Image = global::Xicht.Properties.Resources.Xicht_tray;
             this.tsmTrayIcon.Name = "tsmTrayIcon";
-            this.tsmTrayIcon.Size = new System.Drawing.Size(228, 22);
+            this.tsmTrayIcon.Size = new System.Drawing.Size(244, 22);
             this.tsmTrayIcon.Text = "Show tray icon";
             this.tsmTrayIcon.Click += new System.EventHandler(this.tsmTrayIcon_Click);
             // 
             // tsmAbout
             // 
-            this.tsmAbout.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.tsmAbout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tsmAbout.Image = global::Xicht.Properties.Resources.Xicht;
             this.tsmAbout.Name = "tsmAbout";
-            this.tsmAbout.Size = new System.Drawing.Size(228, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(244, 22);
             this.tsmAbout.Text = "About";
             this.tsmAbout.Click += new System.EventHandler(this.tsmAbout_Click);
             // 
@@ -130,14 +131,14 @@
             this.tsmExit.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.tsmExit.Image = global::Xicht.Properties.Resources.Xicht_exit;
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(228, 22);
+            this.tsmExit.Size = new System.Drawing.Size(244, 22);
             this.tsmExit.Text = "Exit";
             this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
             // tsmPlaceHolder1
             // 
             this.tsmPlaceHolder1.Name = "tsmPlaceHolder1";
-            this.tsmPlaceHolder1.Size = new System.Drawing.Size(167, 6);
+            this.tsmPlaceHolder1.Size = new System.Drawing.Size(180, 6);
             // 
             // tsmFaceEffects
             // 
@@ -146,35 +147,36 @@
             this.tsmFaceSmile,
             this.tsmFaceHurt,
             this.tsmFaceShocked});
+            this.tsmFaceEffects.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmFaceEffects.Name = "tsmFaceEffects";
-            this.tsmFaceEffects.Size = new System.Drawing.Size(170, 22);
+            this.tsmFaceEffects.Size = new System.Drawing.Size(183, 22);
             this.tsmFaceEffects.Text = "Face effects";
             // 
             // tsmFaceInvincible
             // 
             this.tsmFaceInvincible.Name = "tsmFaceInvincible";
-            this.tsmFaceInvincible.Size = new System.Drawing.Size(119, 22);
+            this.tsmFaceInvincible.Size = new System.Drawing.Size(152, 22);
             this.tsmFaceInvincible.Text = "Invincible";
             this.tsmFaceInvincible.Click += new System.EventHandler(this.tsmFaceInvincible_Click);
             // 
             // tsmFaceSmile
             // 
             this.tsmFaceSmile.Name = "tsmFaceSmile";
-            this.tsmFaceSmile.Size = new System.Drawing.Size(119, 22);
+            this.tsmFaceSmile.Size = new System.Drawing.Size(152, 22);
             this.tsmFaceSmile.Text = "Smile";
             this.tsmFaceSmile.Click += new System.EventHandler(this.tsmFaceSmile_Click);
             // 
             // tsmFaceHurt
             // 
             this.tsmFaceHurt.Name = "tsmFaceHurt";
-            this.tsmFaceHurt.Size = new System.Drawing.Size(119, 22);
+            this.tsmFaceHurt.Size = new System.Drawing.Size(152, 22);
             this.tsmFaceHurt.Text = "Hurt";
             this.tsmFaceHurt.Click += new System.EventHandler(this.tsmFaceHurt_Click);
             // 
             // tsmFaceShocked
             // 
             this.tsmFaceShocked.Name = "tsmFaceShocked";
-            this.tsmFaceShocked.Size = new System.Drawing.Size(119, 22);
+            this.tsmFaceShocked.Size = new System.Drawing.Size(152, 22);
             this.tsmFaceShocked.Text = "Shocked";
             this.tsmFaceShocked.Click += new System.EventHandler(this.tsmFaceShocked_Click);
             // 
@@ -190,60 +192,67 @@
             this.tsmPlaceHolder2,
             this.tsmRandomHealth});
             this.tsmMaxHealth.Name = "tsmMaxHealth";
-            this.tsmMaxHealth.Size = new System.Drawing.Size(170, 22);
+            this.tsmMaxHealth.Size = new System.Drawing.Size(183, 22);
             this.tsmMaxHealth.Text = "Set maximum health";
             // 
             // tsmMax100
             // 
+            this.tsmMax100.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmMax100.Name = "tsmMax100";
-            this.tsmMax100.Size = new System.Drawing.Size(113, 22);
+            this.tsmMax100.Size = new System.Drawing.Size(152, 22);
             this.tsmMax100.Text = "Full";
             this.tsmMax100.Click += new System.EventHandler(this.tsmMax100_Click);
             // 
             // tsmMax80
             // 
+            this.tsmMax80.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmMax80.Name = "tsmMax80";
-            this.tsmMax80.Size = new System.Drawing.Size(113, 22);
+            this.tsmMax80.Size = new System.Drawing.Size(152, 22);
             this.tsmMax80.Text = "80 %";
             this.tsmMax80.Click += new System.EventHandler(this.tsmMax80_Click);
             // 
             // tsmMax60
             // 
+            this.tsmMax60.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmMax60.Name = "tsmMax60";
-            this.tsmMax60.Size = new System.Drawing.Size(113, 22);
+            this.tsmMax60.Size = new System.Drawing.Size(152, 22);
             this.tsmMax60.Text = "60 %";
             this.tsmMax60.Click += new System.EventHandler(this.tsmMax60_Click);
             // 
             // tsmMax40
             // 
+            this.tsmMax40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmMax40.Name = "tsmMax40";
-            this.tsmMax40.Size = new System.Drawing.Size(113, 22);
+            this.tsmMax40.Size = new System.Drawing.Size(152, 22);
             this.tsmMax40.Text = "40 %";
             this.tsmMax40.Click += new System.EventHandler(this.tsmMax40_Click);
             // 
             // tsmMax20
             // 
+            this.tsmMax20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmMax20.Name = "tsmMax20";
-            this.tsmMax20.Size = new System.Drawing.Size(113, 22);
+            this.tsmMax20.Size = new System.Drawing.Size(152, 22);
             this.tsmMax20.Text = "20 %";
             this.tsmMax20.Click += new System.EventHandler(this.tsmMax20_Click);
             // 
             // tsmMax0
             // 
+            this.tsmMax0.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmMax0.Name = "tsmMax0";
-            this.tsmMax0.Size = new System.Drawing.Size(113, 22);
+            this.tsmMax0.Size = new System.Drawing.Size(152, 22);
             this.tsmMax0.Text = "Dead";
             this.tsmMax0.Click += new System.EventHandler(this.tsmMax0_Click);
             // 
             // tsmPlaceHolder2
             // 
             this.tsmPlaceHolder2.Name = "tsmPlaceHolder2";
-            this.tsmPlaceHolder2.Size = new System.Drawing.Size(110, 6);
+            this.tsmPlaceHolder2.Size = new System.Drawing.Size(149, 6);
             // 
             // tsmRandomHealth
             // 
+            this.tsmRandomHealth.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmRandomHealth.Name = "tsmRandomHealth";
-            this.tsmRandomHealth.Size = new System.Drawing.Size(113, 22);
+            this.tsmRandomHealth.Size = new System.Drawing.Size(152, 22);
             this.tsmRandomHealth.Text = "Random";
             this.tsmRandomHealth.Click += new System.EventHandler(this.tsmRandomHealth_Click);
             // 
@@ -252,14 +261,15 @@
             this.tsmMood.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmFreakOut});
             this.tsmMood.Name = "tsmMood";
-            this.tsmMood.Size = new System.Drawing.Size(170, 22);
+            this.tsmMood.Size = new System.Drawing.Size(183, 22);
             this.tsmMood.Text = "Set mood";
             // 
             // tsmFreakOut
             // 
             this.tsmFreakOut.CheckOnClick = true;
+            this.tsmFreakOut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmFreakOut.Name = "tsmFreakOut";
-            this.tsmFreakOut.Size = new System.Drawing.Size(120, 22);
+            this.tsmFreakOut.Size = new System.Drawing.Size(152, 22);
             this.tsmFreakOut.Text = "Freak out";
             this.tsmFreakOut.Click += new System.EventHandler(this.tsmFreakOut_Click);
             // 
@@ -302,14 +312,15 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(192, 153);
             this.Controls.Add(this.pbMain);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(100, 100);
-            this.MinimumSize = new System.Drawing.Size(64, 63);
+            this.MinimumSize = new System.Drawing.Size(73, 69);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Xicht";
