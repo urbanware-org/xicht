@@ -46,9 +46,9 @@ There is also a small animated tray icon available.<img src="https://raw.githubu
 Depending on the platform, the following runtime environments are required.
 
 *   ***Windows***:
-    *   *Microsoft .NET Framework 2.0* (or higher)
+    *   *Microsoft .NET Framework* 2.0 (or higher)
 *   ***Linux***:
-    *   *Mono* (tested with version 4.2.4)
+    *   *Mono* 4.2.4 (or higher)
 *   ***macOS***:
     *   Should also run with *Mono* (not tested, yet)
 
