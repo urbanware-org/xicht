@@ -46,11 +46,11 @@ There is also a small animated tray icon available.<img src="https://raw.githubu
 Depending on the platform, the following runtime environments are required.
 
 *   ***Windows***:
-    *   *Microsoft .NET Framework* 2.0 (or higher)
-*   ***Linux***:
+    *   *Microsoft .NET Framework* 4.5 (or higher)
+*   ***Linux*** and ***BSD***:
     *   *Mono* 4.2.4 (or higher)
-*   ***macOS***:
-    *   Should also run with *Mono* (not tested, yet)
+
+Running *Xicht* on *macOS* should also work with *Mono* (not tested, yet).
 
 ### Source code
 
