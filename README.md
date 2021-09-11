@@ -176,7 +176,7 @@ You can contact me by sending an email to [dev@urbanware.org](mailto:dev@urbanwa
 
 ## Useless facts
 
-*   The first version uploaded on this *GitHub* repository was *Xicht* 1.1.2.4 built on January 3<sup>rd</sup>, 2018.
+*   The first version uploaded on the *GitHub* repository was *Xicht* 1.1.2.4 built on January 3<sup>rd</sup>, 2018.
 *   The project name "Xicht" (actually spelled "Gsicht" in ordinary language) means "mug" (in the sense of "face"). The word "Gsicht" derives from "Gesicht" which is the German word for "face".
 *   The original project name was *Faces Of Doom*. Due to the fact, that I wasn't allowed to use the original *Doom* faces and since you can replace the graphics with arbitrary ones, this name was dropped.
 
