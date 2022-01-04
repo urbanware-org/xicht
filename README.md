@@ -70,7 +70,7 @@ By default, *Xicht* comes with some great [high resolution face images](https://
 
 Some people asked me why I do not distribute the original *Doom* HUD face images with my project.
 
-Well, the reason is simple. I don't have the permission. I officially asked *id Software* in 2015 if I could use them for my project and they liked the idea, but unfortunately refused.
+Well, the reason is simple. I don't have the permission. I officially asked *id Software* in 2015 if I could use them for my project and they liked the idea, but unfortunately declined.
 
 Another problem with the original faces is the resolution of them is pretty low (less than 40x40 pixels), so upscaling results in quite pixelated and blurred graphics.
 
