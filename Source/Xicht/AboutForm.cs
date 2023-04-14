@@ -1,12 +1,12 @@
-﻿/******************************************************************************
- * Xicht - Visual CPU load monitoring tool                                    *
- * About form                                                                 *
- * Copyright (C) 2020 by Ralf Kilian                                          *
- * Distributed under the MIT License (https://opensource.org/licenses/MIT)    *
- *                                                                            *
- * GitHub: https://github.com/urbanware-org/xicht                             *
- * GitLab: https://gitlab.com/urbanware-org/xicht                             *
- ******************************************************************************/
+﻿/*
+    Xicht - Visual CPU load monitoring tool
+    About form
+    Copyright (c) 2023 by Ralf Kilian
+    Distributed under the MIT License (https://opensource.org/licenses/MIT)
+
+    GitHub: https://github.com/urbanware-org/xicht
+    GitLab: https://gitlab.com/urbanware-org/xicht
+*/
 
 using System;
 using System.Diagnostics;
