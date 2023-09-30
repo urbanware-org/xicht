@@ -112,13 +112,13 @@ You can also avoid the look-around effect here as described [above](#images).
 With the `convert` command provided by the platform-independent *ImageMagick* software suite you can simply convert the PNG images used on the main window to the ICO files required for the system tray. For example under *Linux*:
 
 ```bash
-$ cd Images
-$ find -type f | grep "\.png$" > /tmp/png2ico.tmp
-$ while read line; do
-      convert "$line" -define icon:auto-resize=32,24,16 $(sed -e "s/\.png$/\.ico/g" <<< $line)
-  done < /tmp/png2ico.tmp
-$ rm -f /tmp/png2ico.tmp
-$ mv *.ico ../Tray/
+cd Images
+find -type f | grep "\.png$" > /tmp/png2ico.tmp
+while read line; do
+    convert "$line" -define icon:auto-resize=32,24,16 $(sed -e "s/\.png$/\.ico/g" <<< $line)
+done < /tmp/png2ico.tmp
+rm -f /tmp/png2ico.tmp
+mv *.ico ../Tray/
 ```
 
 In case there is a problem displaying the transparency, you can replace it with e.g. the background color of your tray bar just by adding a couple of parameters.
@@ -126,14 +126,14 @@ In case there is a problem displaying the transparency, you can replace it with 
 Let's assume your tray bar has the background color `#2f2f2f` (<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/2f2f2f.png" alt="#2f2f2f">). In that case the `convert` command looks like this:
 
 ```bash
-$ cd Images
-$ find -type f | grep "\.png$" > /tmp/png2ico.tmp
-$ while read line; do
-      convert "$line" -background "#2f2f2f" -flatten \
-              -define icon:auto-resize=32,24,16 $(sed -e "s/\.png$/\.ico/g" <<< $line)
-  done < /tmp/png2ico.tmp
-$ rm -f /tmp/png2ico.tmp
-$ mv *.ico ../Tray/
+cd Images
+find -type f | grep "\.png$" > /tmp/png2ico.tmp
+while read line; do
+    convert "$line" -background "#2f2f2f" -flatten \
+            -define icon:auto-resize=32,24,16 $(sed -e "s/\.png$/\.ico/g" <<< $line)
+done < /tmp/png2ico.tmp
+rm -f /tmp/png2ico.tmp
+mv *.ico ../Tray/
 ```
 
 [Top](#xicht-)
