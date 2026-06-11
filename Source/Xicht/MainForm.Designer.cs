@@ -155,28 +155,28 @@
             // tsmFaceInvincible
             // 
             this.tsmFaceInvincible.Name = "tsmFaceInvincible";
-            this.tsmFaceInvincible.Size = new System.Drawing.Size(125, 22);
+            this.tsmFaceInvincible.Size = new System.Drawing.Size(180, 22);
             this.tsmFaceInvincible.Text = "Invincible";
             this.tsmFaceInvincible.Click += new System.EventHandler(this.tsmFaceInvincible_Click);
             // 
             // tsmFaceSmile
             // 
             this.tsmFaceSmile.Name = "tsmFaceSmile";
-            this.tsmFaceSmile.Size = new System.Drawing.Size(125, 22);
+            this.tsmFaceSmile.Size = new System.Drawing.Size(180, 22);
             this.tsmFaceSmile.Text = "Smile";
             this.tsmFaceSmile.Click += new System.EventHandler(this.tsmFaceSmile_Click);
             // 
             // tsmFaceHurt
             // 
             this.tsmFaceHurt.Name = "tsmFaceHurt";
-            this.tsmFaceHurt.Size = new System.Drawing.Size(125, 22);
+            this.tsmFaceHurt.Size = new System.Drawing.Size(180, 22);
             this.tsmFaceHurt.Text = "Hurt";
             this.tsmFaceHurt.Click += new System.EventHandler(this.tsmFaceHurt_Click);
             // 
             // tsmFaceShocked
             // 
             this.tsmFaceShocked.Name = "tsmFaceShocked";
-            this.tsmFaceShocked.Size = new System.Drawing.Size(125, 22);
+            this.tsmFaceShocked.Size = new System.Drawing.Size(180, 22);
             this.tsmFaceShocked.Text = "Shocked";
             this.tsmFaceShocked.Click += new System.EventHandler(this.tsmFaceShocked_Click);
             // 
@@ -269,7 +269,7 @@
             this.tsmFreakOut.CheckOnClick = true;
             this.tsmFreakOut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmFreakOut.Name = "tsmFreakOut";
-            this.tsmFreakOut.Size = new System.Drawing.Size(123, 22);
+            this.tsmFreakOut.Size = new System.Drawing.Size(180, 22);
             this.tsmFreakOut.Text = "Freak out";
             this.tsmFreakOut.Click += new System.EventHandler(this.tsmFreakOut_Click);
             // 

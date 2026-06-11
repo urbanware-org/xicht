@@ -1,7 +1,7 @@
 ﻿/*
     Xicht - Visual CPU load monitoring tool
     Main form
-    Copyright (c) 2023 by Ralf Kilian
+    Copyright (c) 2026 by Ralf Kilian
     Distributed under the MIT License (https://opensource.org/licenses/MIT)
 
     GitHub: https://github.com/urbanware-org/xicht
@@ -58,6 +58,8 @@ namespace Xicht
         public MainForm()
         {
             InitializeComponent();
+
+            ToolStripManager.Renderer = new SmoothImageRenderer();
 
             cpuCounter = new PerformanceCounter();
             cpuCounter.CategoryName = "Processor";
