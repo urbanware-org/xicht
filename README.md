@@ -20,7 +20,7 @@ Visual CPU monitoring tool using a HUD face to display the current load.
 
 ## Details
 
-In the 1990's, first-person shooters like *Doom* had the protagonist's face on their HUD (head-up-display) to show his current state of health. Also, the face looked around and reacted to events like getting hurt or acquiring certain items.
+In the 1990's, first-person shooters like *Doom* had the protagonist's face on their HUD (head-up-display) to show his current state of health. Also, the face randomly looked around and reacted to events like getting hurt or acquiring certain items.
 
 The *Xicht* project takes the *Doom* HUD face as a model to display the CPU load. The more load the CPU has, the less "health" the displayed face shows.
 
@@ -185,13 +185,13 @@ In some cases the *Xicht* tray icon "replaces" another on the system tray. The a
 
 ### Tray icon disappears instead of disabling
 
-When the tray icon is enabled (either via right-click menu on the main window or via `tray` command-line argument) and disabled using one of both ways, the icon itself disappears
+When the tray icon is enabled (either via right-click menu on the main window or via `tray` command-line argument) and disabled using one of both ways, the icon itself disappears.
 
-However, it just turns invisible. So, right clicking on the empty space it has left will still trigger the right-click menu.
+However, it just turns invisible and right clicking on the empty space it has left will still trigger the right-click menu.
 
 ### Program crashes or freezes on exit
 
-When the tray icon is enabled (via right-click menu on the main window or via `tray` command-line argument) closing the program with the right-click menu on the main window or tray icon, it will either crash throwing an exception or freeze.
+When the tray icon is enabled (either via right-click menu on the main window or via `tray` command-line argument) closing the program with the right-click menu on the main window or tray icon, it will either crash throwing an exception or freeze.
 
 The main window and tray icon are disposed, but the process is still running.
 
