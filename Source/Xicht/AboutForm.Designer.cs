@@ -218,8 +218,6 @@
 
         }
 
-        #endregion
-
         private System.Windows.Forms.PictureBox pbAboutLogo;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblXicht;
@@ -233,5 +231,7 @@
         private System.Windows.Forms.LinkLabel lnkGitLab;
         private System.Windows.Forms.LinkLabel lnkGitHub;
         private System.Windows.Forms.LinkLabel lnkLicense;
+
+        #endregion
     }
 }
