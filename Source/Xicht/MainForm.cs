@@ -240,7 +240,10 @@ namespace Xicht
                 if (freakOut)
                 {
                     health = 1;
-                    Text = "1 %";
+                    Text = "1%";
+                    {
+                        nfiTray.Text = "Xicht (1%)";
+                    }
                 }
                 else
                 {
@@ -299,7 +302,11 @@ namespace Xicht
                 health = rnd.Next(1, 100);
             }
 
-            Text = health.ToString() + " %";
+            Text = health.ToString() + "%";
+            if (nfiTray.Visible)
+            {
+                nfiTray.Text = "Xicht (" + health.ToString() + "%)";
+            }
 
             if (health > 80)
             {
@@ -511,7 +518,10 @@ namespace Xicht
             randomHealth = false;
 
             FaceDead();
-            Text = "0 %";
+            Text = "0%";
+            {
+                nfiTray.Text = "Xicht (0%)";
+            }
         }
 
         private void tsmExit_Click(object sender, EventArgs e)
