@@ -7,6 +7,7 @@
 *   [Graphics](#graphics)
 *   [Command-line arguments](#command-line-arguments)
 *   [Contact](#contact)
+*   [Issues](#issues)
 *   [Useless facts](#useless-facts)
 
 ----
@@ -54,6 +55,9 @@ Depending on the platform, the following runtime environments are required.
     *   *Mono* 4.2.4 (or higher)
 
 Running *Xicht* on *macOS* should also work with *Mono* (not tested, yet).
+
+There are some [tray icon related issues]((#issues)) when running *Xicht* on *Linux* (possibly also on other systems) when using the *Mono* runtime environment.
+
 
 ### Source code
 
