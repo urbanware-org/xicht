@@ -37,6 +37,9 @@ Furthermore, there is a right-click context menu, where you can manually set the
 
 There is also a small animated tray icon available.<img src="https://raw.githubusercontent.com/urbanware-org/xicht/master/Stuff/GitHub/Xicht_tray_icon.gif" alt="Tray icon" align="right"/>
 
+> [!NOTE]
+> This project was **officially discontinued** as of June 2026 and is **no longer maintained**.
+
 [Top](#xicht-)
 
 ## Requirements
@@ -54,7 +57,7 @@ Running *Xicht* on *macOS* should also work with *Mono* (not tested, yet).
 
 ### Source code
 
-The project was once written in 2015 using *Microsoft Visual Studio 2012 Express* (if I remember it right) and before uploading it here the binary has been compiled with *Visual Studio 2015 Community Edition*.
+The latest version of *Xicht* was compiled with *Microsoft Visual Studio 2026 Community Edition*. I assume that the source code can also be opened and modified using older versions, but I can't say for sure.
 
 Feel free to modify!
 
@@ -163,6 +166,30 @@ Notice that there is no validation or error handling for these arguments, so giv
 
 *   `top=`<br>The distance in pixels between the top edge of the screen and the main window e.g. `top=100` (without spaces).
 *   `left=`<br>The distance in pixels between the left edge of the screen and the main window e.g. `left=100` (without spaces).
+
+[Top](#xicht-)
+
+## Issues
+
+There are known issues which occur on *Linux* (possibly also on other systems) when using the *Mono* runtime environment. All of them are tray icon related.
+
+As the project is no longer maintained, they will not be fixed.
+
+### Tray icon "replaces" another
+
+In some cases the *Xicht* tray icon "replaces" another on the system tray. The affected program still runs, but its tray icon seems to be missing. Closing *Xicht* will either show the original tray icon or leave an empty space.
+
+### Tray icon disappears instead of disabling
+
+When the tray icon is enabled (either via right-click menu on the main window or via `tray` command-line argument) and disabled using one of both ways, the icon itself disappears
+
+However, it just turns invisible. So, right clicking on the empty space it has left will still trigger the right-click menu.
+
+### Program crashes or freezes on exit
+
+When the tray icon is enabled (via right-click menu on the main window or via `tray` command-line argument) closing the program with the right-click menu on the main window or tray icon, it will either crash throwing an exception or freeze.
+
+The main window and tray icon are disposed, but the process is still running.
 
 [Top](#xicht-)
 
