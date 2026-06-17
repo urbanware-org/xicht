@@ -199,9 +199,9 @@ The main window and tray icon are disposed, but the process is still running.
 
 ## Contact
 
-Any suggestions, questions, bugs to report or feedback to give?
+As mentioned above, this project was discontinued. For this reason, no new features will be implemented, existing features will not be enhanced and remaining bugs will not be fixed either.
 
-You can contact me by sending an email to [dev@urbanware.org](mailto:dev@urbanware.org) or by opening a *GitHub* issue (which I would prefer if you have a *GitHub* account).
+However, if you have questions about it, you can contact me by sending an email to <dev@urbanware.org>.
 
 [Top](#xicht-)
 
